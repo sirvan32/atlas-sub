@@ -29,7 +29,7 @@
    ```bash
    sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/trbsami/atlas-sub/main/src/fa/index.html
 
-1. **فایل رو در سرور خود نصب کنید (نسخه فارسی)**:
+1. **فایل رو در سرور خود نصب کنید (نسخه انگلیسی)**:
 2. 
    ```bash
    sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/trbsami/atlas-sub/main/src/en/index.html   
