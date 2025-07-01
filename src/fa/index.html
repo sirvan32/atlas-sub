@@ -705,21 +705,22 @@
                             <i class="fas fa-copy config-link-copy-icon" @click.stop="copyAllLinks()"></i>
                         </div>
                     </div>
-                    <template x-if="subscriptionUrl.trim() !== ''">
-                        <div class="config-link">
-                            <div class="config-link-name">لینک اشتراک</div>
-                            <div class="config-link-buttons">
-                                <i class="fas fa-copy config-link-copy-icon" @click.stop="copyLink(subscriptionUrl)"></i>
-                                <button class="config-link-qr-btn" @click.stop="openQr(subscriptionUrl)">QR کد</button>
-                            </div>
-                        </div>
-                    </template>
+   
                     <template x-for="(link, index) in links" :key="index">
                         <div class="config-link">
                             <div class="config-link-name" x-text="getLinkName(link)"></div>
                             <div class="config-link-buttons">
                                 <i class="fas fa-copy config-link-copy-icon" @click.stop="copyLink(link)"></i>
                                 <button class="config-link-qr-btn" @click.stop="openQr(link)">QR کد</button>
+                            </div>
+                        </div>
+                    </template>
+                                       <template x-if="subscriptionUrl.trim() !== ''">
+                        <div class="config-link">
+                            <div class="config-link-name">لینک اشتراک</div>
+                            <div class="config-link-buttons">
+                                <i class="fas fa-copy config-link-copy-icon" @click.stop="copyLink(subscriptionUrl)"></i>
+                                <button class="config-link-qr-btn" @click.stop="openQr(subscriptionUrl)">QR کد</button>
                             </div>
                         </div>
                     </template>
