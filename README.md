@@ -5,7 +5,7 @@
 یک قالب رابط کاربری سبک و زیبا برای پنل مرزبان است. این قالب با HTML  ساخته شده و به‌راحتی قابل ویرایش و استفاده می‌باشد.
 <p align="center">
   <a href="https://github.com/trbsami/marzban-template" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/trbsami/marzban-template/main/IMG_20250424_231519_470.png" alt="SubPage screenshots" width="800" height="auto">
+    <img src="https://raw.githubusercontent.com/trbsami/atlas-sub/main/photo_2025-06-30_16-28-44.jpg" alt="SubPage screenshots" width="800" height="auto">
   </a>
 </p>
 
