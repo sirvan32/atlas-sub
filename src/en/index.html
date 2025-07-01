@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="rtl">
 <head>
     <link rel="icon" href="https://raw.githubusercontent.com/trbsami/atlas-sub/main/%DB%B2%DB%B0%DB%B2%DB%B5%DB%B0%DB%B6%DB%B3%DB%B0_%DB%B1%DB%B9%DB%B0%DB%B9%DB%B2%DB%B0%DB%B3%DB%B0%DB%B4.png" type="image/png" />
     <meta charset="UTF-8">
@@ -56,13 +56,13 @@
       }
 
       body {
-          font-family: 'Inter', 'Vazir', sans-serif;
+          font-family: 'Vazir', 'Inter', sans-serif;
           background-color: var(--bg-primary);
           color: var(--text-primary);
           line-height: 1.5;
           min-height: 100vh;
           padding: 20px;
-          direction: ltr;
+          direction: rtl;
       }
 
       .container {
@@ -113,7 +113,7 @@
           flex-direction: row;
           align-items: center;
           gap: 1rem;
-          direction: ltr;
+          direction: rtl;
       }
 
       .setting-item {
@@ -191,26 +191,6 @@
           color: var(--text-primary);
           padding: 10px;
           border-radius: 8px;
-      }
-
-      .service-card {
-          background-color: var(--bg-card);
-          border-radius: var(--border-radius);
-          padding: 15px;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: var(--card-shadow);
-          max-width: 200px;
-          margin-bottom: 20px;
-      }
-
-      .service-icon {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          object-fit: cover;
       }
 
       .progress-container {
@@ -384,9 +364,9 @@
 
       .config-link-name {
           flex: 1;
-          text-align: left;
+          text-align: right;
           font-weight: 500;
-          padding-left: 15px;
+          padding-right: 15px;
           font-size: 1rem;
           color: var(--text-primary);
       }
@@ -533,22 +513,22 @@
 
       .device-app-card .app-icon {
           font-size: 1.6rem;
-          margin-right: 10px;
+          margin-left: 10px;
       }
 
       .app-name {
           flex: 1;
-          text-align: left;
+          text-align: right;
           font-weight: 500;
-          padding-left: 15px;
+          padding-right: 1px;
           font-size: 1rem;
       }
 
       .app-support {
           font-size: 0.8rem;
           color: var(--text-secondary);
-          text-align: left;
-          padding-left: 15px;
+          text-align: right;
+          padding-right: 15px;
       }
 
       .app-buttons {
@@ -611,19 +591,17 @@
                         <div class="setting-icon" style="background-color: var(--accent-purple);">
                             <i class="fas" :class="isLight ? 'fa-sun' : 'fa-moon'"></i>
                         </div>
-                        <span class="setting-label">Toggle Theme</span>
+                        <span class="setting-label"></span>
                     </div>
                     <div class="setting-item" onclick="openSupport()">
                         <div class="setting-icon" style="background-color: var(--accent-green);">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <span class="setting-label">Support</span>
+                        <span class="setting-label"></span>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
         <div class="cards-grid">
             <div class="card card-blue">
@@ -717,7 +695,7 @@
                             <i class="fas fa-link"></i>
                         </div>
                         <span>Config Links</span>
-                        <i class="fas" :class="showLinks ? 'fa-chevron-up' : 'fa-chevron-down'" style="margin-left: auto;"></i>
+                        <i class="fas" :class="showLinks ? 'fa-chevron-up' : 'fa-chevron-down'" style="margin-right: auto;"></i>
                     </div>
                 </div>
                 <div class="advanced-card-body" x-show="showLinks" x-transition>
@@ -768,16 +746,16 @@
                             <i class="fas fa-download"></i>
                         </div>
                         <span>Recommended Apps</span>
-                        <i class="fas" :class="showApps ? 'fa-chevron-up' : 'fa-chevron-down'" style="margin-left: auto;"></i>
+                        <i class="fas" :class="showApps ? 'fa-chevron-up' : 'fa-chevron-down'" style="margin-right: auto;"></i>
                     </div>
                 </div>
                 <div class="advanced-card-body" x-show="showApps" x-transition>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap:4">
                         <div class="device-app-card">
                             <i class="fab fa-windows app-icon" style="color:#2563EB;"></i>
                             <div class="app-name">Nekoray</div>
                             <div class="app-buttons">
-                                <a :href="apps[0].link" target="_blank" class="download-btn">Download</a>
+                                <a :href="apps[0].link" target="_blank" class="download-btn">Get</a>
                                 <button @click="triggerAppImport(apps[0])" class="add-btn">Add</button>
                             </div>
                         </div>
@@ -785,7 +763,7 @@
                             <i class="fab fa-android app-icon" style="color:#4CAF50;"></i>
                             <div class="app-name">v2rayNG</div>
                             <div class="app-buttons">
-                                <a :href="apps[1].link" target="_blank" class="download-btn">Download</a>
+                                <a :href="apps[1].link" target="_blank" class="download-btn">Get</a>
                                 <button @click="triggerAppImport(apps[1])" class="add-btn">Add</button>
                             </div>
                         </div>
@@ -793,7 +771,7 @@
                             <i class="fab fa-apple app-icon" style="color:#6B7280;"></i>
                             <div class="app-name">Streisand</div>
                             <div class="app-buttons">
-                                <a :href="apps[2].link" target="_blank" class="download-btn">Download</a>
+                                <a :href="apps[2].link" target="_blank" class="download-btn">Get</a>
                                 <button @click="triggerAppImport(apps[2])" class="add-btn">Add</button>
                             </div>
                         </div>
@@ -928,13 +906,13 @@
             const newTheme = isLight ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            document.documentElement.setAttribute('dir', 'ltr');
+            document.documentElement.setAttribute('dir', 'rtl');
         }
 
         function applySavedTheme() {
             const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
-            document.documentElement.setAttribute('dir', 'ltr');
+            document.documentElement.setAttribute('dir', 'rtl');
         }
 
         document.addEventListener('DOMContentLoaded', () => {
