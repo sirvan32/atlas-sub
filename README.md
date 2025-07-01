@@ -29,9 +29,10 @@
    ```bash
    sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/trbsami/atlas-sub/main/src/fa/index.html
 
- 1. نسخه انگلیسی :
-   sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/trbsami/atlas-sub/main/src/fa/index.html
-   
+1. **فایل رو در سرور خود نصب کنید (نسخه فارسی)**:
+2. 
+   ```bash
+   sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/trbsami/atlas-sub/main/src/en/index.html   
 3. **دستورات زیر را در ترمینال سرور خود اجرا کنید**:
    ```bash
    echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
