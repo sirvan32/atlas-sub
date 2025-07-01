@@ -583,7 +583,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                اطلاعات<span>اشتراک</span>
+                اطلاعات<span>سرویس شما</span>
             </div>
             <div class="settings-card">
                 <div class="settings-list">
@@ -621,7 +621,7 @@
                         'disabled': ['fa-times-circle', '#4b5563', 'غیرفعال']
                     }[user.status] if user.status in ['active','limited','expired','disabled'] else ['fa-question-circle', '#6b7280', 'نامشخص'] %}
                     <i class="fas {{ status_icon[0] }}" style="color:{{ status_icon[1] }}; font-size:24px;"></i>
-                    <span class="card-label">وضعیت</span>
+                    <span class="card-label">وضعیت سرور</span>
                 </div>
                 {% set base_style = "color:#fff; border-radius:9999px; padding:6px 14px; font-weight:600; font-size:14px; display:inline-block; min-width:70px; text-align:center;" %}
                 <span style="{{ base_style }} background-color:{{ status_icon[1] }};">{{ status_icon[2] }}</span>
@@ -694,13 +694,13 @@
                         <div class="advanced-card-icon">
                             <i class="fas fa-link"></i>
                         </div>
-                        <span>لینک‌های کانفیگ</span>
+                        <span> کانفیگ های شما </span>
                         <i class="fas" :class="showLinks ? 'fa-chevron-up' : 'fa-chevron-down'" style="margin-right: auto;"></i>
                     </div>
                 </div>
                 <div class="advanced-card-body" x-show="showLinks" x-transition>
                     <div class="config-link">
-                        <div class="config-link-name">همه کانفیگ‌ها</div>
+                        <div class="config-link-name"> کپی کردن همه کانفیگ ها</div>
                         <div class="config-link-buttons">
                             <i class="fas fa-copy config-link-copy-icon" @click.stop="copyAllLinks()"></i>
                         </div>
@@ -745,7 +745,7 @@
                         <div class="advanced-card-icon">
                             <i class="fas fa-download"></i>
                         </div>
-                        <span>برنامه‌های پیشنهادی</span>
+                        <span>برنامه های پیشنهادی برای نصب </span>
                         <i class="fas" :class="showApps ? 'fa-chevron-up' : 'fa-chevron-down'" style="margin-right: auto;"></i>
                     </div>
                 </div>
